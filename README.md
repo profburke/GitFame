@@ -1,5 +1,6 @@
 # GitFame
-A Swift CLI script that logs your GitHub Stars and Forks.
+A CLI tool that displays a GitHub user's Stars and Forks.
+Original version by Arthur Sabintsev available [here](https://github.com/ArtSabintsev/GitFame).
 
 ## Note
 This tool performs **2** requests to GitHub's API without authentication. The end-user will be rate-limited at 60 reqs/hr.
@@ -7,6 +8,8 @@ This tool performs **2** requests to GitHub's API without authentication. The en
 ## Installation
 - Run `make` to install `gitfame` to `/usr/local/bin`.
 - Run `make uninstall` to remove `gitfame` from `/usr/local/bin`,
+
+## Usage
 
 ```shell
 $gitfame <GitHub_Username>

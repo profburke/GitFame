@@ -12,7 +12,16 @@ This tool performs **2** requests to GitHub's API without authentication. The en
 ## Usage
 
 ```shell
-$gitfame <GitHub_Username>
+USAGE: gitfame [-a] [--forks] [--name] [--stars] <user>
+
+ARGUMENTS:
+  <user>                  The GitHub user to check.
+
+OPTIONS:
+  -a                      List all repositories, including forks.
+  --forks/--name/--stars  Specify how to sort the output. (default: --stars)
+  -h, --help              Show help information.
+
 ```
 
 ## Example

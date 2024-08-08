@@ -5,18 +5,20 @@
 //  Created by Matthew Burke on 8/7/24.
 //
 
-enum SortType {
-    case alphabetical
-    case byForks
-    case byStars
+import ArgumentParser
+
+enum SortType: EnumerableFlag {
+    case forks
+    case name
+    case stars
 
     var predicate: (Repo, Repo) -> Bool {
         switch self {
-        case .alphabetical:
-            return { a, b in a.name < b.name }
-        case .byForks:
+        case .forks:
             return { a, b in a.forks > b.forks }
-        case .byStars:
+        case .name:
+            return { a, b in a.name < b.name }
+        case .stars:
             return { a, b in a.stars > b.stars }
         }
     }

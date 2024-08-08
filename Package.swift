@@ -11,7 +11,13 @@ let package = Package(
     products: [
         .executable(name: "gitfame", targets: ["GitFame"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.3.0"),
+    ],
     targets: [
-        .executableTarget(name: "GitFame"),
+        .executableTarget(name: "GitFame",
+                          dependencies: [
+                            .product(name: "ArgumentParser", package: "swift-argument-parser")
+                          ]),
     ]
 )
